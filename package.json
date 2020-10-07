@@ -1,7 +1,7 @@
 {
   "name": "@ibas/gatsby-theme-agency",
   "description": "A simple business site to showcase your product and services",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "author": "Ibas Majid <ibas@ibaslogic.com>",
   "dependencies": {

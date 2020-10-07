@@ -63,18 +63,19 @@ const Hero = ({ filename, heroContent }) => {
     }
   `)
 
-  const image = data.placeholderImage.edges.find(
+  let image = data.placeholderImage.edges.find(
     ({ node }) => node.relativePath === filename
-  ).node
+  )
 
-  if (!image) {
-    return null
+  if (typeof image !== "undefined") {
+    image = image.node
   }
+
   return (
     <section css={styles.bgContainer}>
       <div css={styles.content}>
         <BackgroundHero
-          img={image.childImageSharp.fluid}
+          img={image && image.childImageSharp.fluid}
           styleClass={styles.backgroundImage}
         >
           <div css={styles.innerContent}>

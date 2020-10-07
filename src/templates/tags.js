@@ -15,7 +15,7 @@ import styles from "../components/blogpage/blogitems/blogItems.css"
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.posts
-  const { blogPostPath } = data.postPath.siteMetadata
+  const { blogBasePath } = data.postPath.siteMetadata
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
@@ -53,7 +53,7 @@ const Tags = ({ pageContext, data }) => {
                   featured={featured}
                   slug={slug}
                   defaultLayout={defaultLayout}
-                  postPath={blogPostPath}
+                  postPath={blogBasePath}
                 />
               )
             })}
@@ -70,7 +70,7 @@ export const query = graphql`
   query($tag: String!) {
     postPath: site {
       siteMetadata {
-        blogPostPath
+        blogBasePath
       }
     }
     posts: allMarkdownRemark(

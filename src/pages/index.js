@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => {
       <main className="main" role="main">
         <Hero
           heroContent={heroContent.siteMetadata.homePage.hero_content}
-          filename={`${homeHero || `home_hero.jpg`}`}
+          filename={homeHero}
         />
         <OurClients />
         <ServicesItems />
