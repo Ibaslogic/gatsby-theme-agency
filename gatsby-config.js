@@ -1,10 +1,10 @@
 const initialOptions = {
-  blogBasePath: ``, // indicate "/blog" if you want posts URL as "/blog/my-post" or leave empty if you wany "/my-post"
+  blogBasePath: ``, // indicate "/blog" if you want posts URL as "/blog/my-post" or leave empty if you want "/my-post"
   blogPostPath: `contents/blog`,
   testimonialPath: `contents/testimonial`,
   servicesPostPath: `contents/services`,
   title: `Business`,
-  description: `I showcase my expertice in this website`,
+  description: `I showcase my expertise in this website`,
   siteUrl: `https://ibaslogic.com`,
   siteName: `Ibaslogic`,
   giHubPostBaseURL: `https://github.com/Ibaslogic/gatsby-site-agency/tree/master/contents/blog/`,
@@ -13,18 +13,18 @@ const initialOptions = {
     {
       name: `services`,
       title: `Services`,
-      url: `/services`, // must include "/" e.g "/services"
+      url: ``, // must include "/" e.g "/services"
     },
     {
       name: `contact`,
       title: `Contact Us`,
-      url: `/contact-us`,
+      url: ``,
     },
-    { name: `about`, title: `About Us`, url: `/about-us` },
+    { name: `about`, title: `About Us`, url: `` },
     {
       name: `testimonials`,
       title: `Testimonials`,
-      url: `/testimonials`,
+      url: ``,
     },
   ],
   // Color for menu links
@@ -63,7 +63,7 @@ const initialOptions = {
       heading: `Our Clients are awesome! Are you ready to join this amazing list?`,
       subHeading: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eaque reprehenderit suscipit facilis tenetur sunt sint modi esse culpa quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
       images: [
-        // add clients images in the src/images folder.
+        // add clients images in the images folder.
         { image: `verizon.png` },
         { image: `bosch.png` },
         { image: `samsung.png` },
@@ -84,12 +84,6 @@ const initialOptions = {
       linkText: `read more`,
       buttonText: `all testimonial`,
       buttonTextLinkTo: `/testimonials`,
-    },
-    consultation: {
-      heading: `Need a consultation?`,
-      subHeading: `Then let's talk! We are here to provide you the best service.`,
-      buttonText: `contact us`,
-      buttonTextLinkTo: `/contact-us`,
     },
   },
   servicesPage: {
@@ -113,6 +107,14 @@ const initialOptions = {
     heading: `Let's talk about your project`,
     subHeading: `Lorem ipsum dolor sit amet consectetur adipisicing elit spernatur eaque reprehenderit suscipit.`,
     showContactForm: true, // Not hosting on netlify? set to false. Else, set to true and start receiving submissions in your Netlify site admin panel.
+  },
+  footerSection: {
+    consultation: {
+      heading: `Need a consultation?`,
+      subHeading: `Then let's talk! We are here to provide you the best service.`,
+      buttonText: `contact us`,
+      buttonTextLinkTo: `/contact-us`,
+    },
   },
 }
 
@@ -159,6 +161,7 @@ module.exports = (userOptions = {}) => {
     servicesPage,
     testimonialPage,
     contactPage,
+    footerSection,
   } = options
 
   return {
@@ -184,6 +187,7 @@ module.exports = (userOptions = {}) => {
       servicesPage,
       testimonialPage,
       contactPage,
+      footerSection,
     },
 
     plugins: [

@@ -7,7 +7,8 @@ const Menu = ({ handleToggle, navbarOpen }) => {
   const defaultLinks = {
     blog: { title: `Blog`, url: `/blog` },
     services: { title: `Services`, url: `/services` },
-    about: { title: `About`, url: `` },
+    testimonials: { title: `Testimonials`, url: `/testimonials` },
+    about: { title: `About`, url: `/about-us` },
     contact: { title: `Contact`, url: `/contact-us` },
   }
 
