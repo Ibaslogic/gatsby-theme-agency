@@ -24,6 +24,7 @@ Let’s get started!
 - [Adding Testimonial posts](#adding-testimonial-posts)
 - [Run gatsby develop](#run-gatsby-develop)
 - [Configuring siteMetadata](#configuring-siteMetadata)
+- [Adding Favicon to your Gatsby Site](#adding-favicon-to-your-gatsby-site)
 - [Component shadowing](#component-shadowing)
 
 ## Installation
