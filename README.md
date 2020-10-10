@@ -388,7 +388,7 @@ module.exports = {
 
 | Key / Option               | Type           | Description                                                                                                                                                                 |
 | -------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| blogBasePath               | string         | Default to `/`. Where blog posts should be served from. Indicate /blog if you want post URL as `/blog/my-post` or leave empty if you want `/my-post`                        |
+| blogBasePath               | string         | Default to `/`. Where blog posts should be served from? Indicate `/blog` if you want post URL as `/blog/my-post` or leave empty if you want `/my-post`                      |
 | blogPostPath               | string         | Default to `contents/blog` where to store your blog posts                                                                                                                   |
 | testimonialPath            | string         | Default to `contents/testimonial`. Where to store your testimonial posts                                                                                                    |
 | servicesPostPath           | string         | Default to `contents/services`. Where to store your services posts                                                                                                          |
@@ -398,8 +398,8 @@ module.exports = {
 | siteName                   | string         | Give your site a name                                                                                                                                                       |
 | gitHubPostBaseURL          | string         | Require. Path to your blog post on GitHub. Necessary for users to edit posts.                                                                                               |
 | menuLinks                  | array          | Array of objects for the menu where each of the items represents a link                                                                                                     |
-| linkMenuColor.color        | string         | Default #2d2d2d. Color for menu link                                                                                                                                        |
-| linkMenuColor.hover        | string         | Default #b2924e. Hover color for menu link                                                                                                                                  |
+| linkMenuColor.color        | string         | Default `#2d2d2d`. Color for menu link                                                                                                                                      |
+| linkMenuColor.hover        | string         | Default `#b2924e`. Hover color for menu link                                                                                                                                |
 | twitter                    | string         | Twitter username e.g ibaslogic. Needed for blog post share                                                                                                                  |
 | social                     | [{name, link}] | Add your social link here                                                                                                                                                   |
 | email                      | string         | your email address                                                                                                                                                          |
@@ -409,7 +409,7 @@ module.exports = {
 | homePage                   | object         | Contains the homepage information. (From the hero content to client section to services and the testimonial section). Make sure you set `homeHero` to see the hero content. |
 | servicesPage               | object         | Update the content at `/services` page and the single service post button text.                                                                                             |
 | testimonialPage            | object         | Update the heading and subheading of the `/testimonial` page here                                                                                                           |
-| contactPage                | object         | Update the heading and subheading of the /contact-us page here. Also, set contactPage.showContactForm to true if you are hosting your site on netlify.                      |
+| contactPage                | object         | Update the heading and subheading of the `/contact-us` page here. Also, set `contactPage.showContactForm` to `true` if you are hosting your site on netlify.                |
 | footerSection.consultation | object         | Update the heading, subheading and the button text here.                                                                                                                    |
 
 <br />
