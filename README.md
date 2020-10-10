@@ -37,10 +37,10 @@ mkdir agency-site && cd agency-site
 Next, run the following command to create a package.json file
 
 ```sh
-Yarn init –y
+yarn init –y
 ```
 
-Still, in the root directory, run the following command to add all required dependencies
+Then, run the following command to add all required dependencies
 
 ```sh
 yarn add react react-dom gatsby @ibas/gatsby-theme-agency
@@ -48,7 +48,7 @@ yarn add react react-dom gatsby @ibas/gatsby-theme-agency
 
 ## Updating the Project Structure
 
-Once the installation is complete, update the project structure so it looks like this:
+Once the installation is complete, open with your text editor and update the project structure so it looks like this:
 
 ```
 agency-site
@@ -151,7 +151,7 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, perferendis
 ![body image](./images/gatsby-deploy.jpg)
 ```
 
-In the same directory, you should have an `images` folder. Add the necessary images.
+In the same directory, you should have an `images` folder where you add the necessary images.
 
 ## Adding the services posts
 
@@ -321,7 +321,7 @@ module.exports = {
               `The question is: Are you ready to talk about your project?`,
               `Then, go ahead and get in touch`,
             ],
-            homeHero: `home_hero.jpg`, //Important. Specify image file for the home page hero image and add in the images folder e.g home_hero_bg.jpg
+            homeHero: `home_hero.jpg`, //Important. Specify image file for the home page hero image (e.g home_hero_bg.jpg) and add it in the agency-site/images folder
           },
           ourClients: {
             heading: `Our Clients are awesome! Are you ready to join this amazing list?`,
@@ -418,13 +418,44 @@ Restart the gatsby develop.
 
 You should be able to see your site content rendered. Else, create an issue.
 
+## Adding Favicon to your Gatsby Site
+
+Stop your dev server and run this command from your root directory:
+
+```
+yarn add gatsby-plugin-manifest
+```
+
+Then add this to your `gatsby-config.js`:
+
+```js
+{
+  resolve: `gatsby-plugin-manifest`,
+  options: {
+    name: `gatsbytheme`,
+    short_name: `gatsbytheme`,
+    start_url: `/`,
+    background_color: `#663399`,
+    theme_color: `#663399`,
+    display: `minimal-ui`,
+    icon: `src/static/gatsby-icon.png`, // This path is relative to the root of the site.
+  },
+},
+```
+
+Depending on where you want to save your icon. You can modify the icon path to point to that directory. With the current path as seen above, simply create a `src` folder in the project root. Inside this folder, create a `static` folder and place your icon.
+
+Save your file and start the development server.
+
 ## Component Shadowing
 
 You may want to make changes that are not captured in the gatsby configuration file. For instance, the content of the `/about-me` is not present in the file. So what can we do?
 
 While we can fork the theme and make necessary changes, Gatsby provides us with a more intuitive way to handle this scenario.
 
-With component shadowing, we can use a naming convention or strategy to tell Gatsby not to render a file that comes with the theme but the one we create in the site project. It is important to quickly note that this is not restricted to only React component as the name suggest, but any other files like markdown, CSS or JavaScript (.js, JSON etc).
+With component shadowing, we can use a naming convention or strategy to tell Gatsby not to render a file that comes with the theme but the one we create in the site project.
+
+It is important to quickly note that this is not restricted to only React component as the name suggest, but any other files like markdown, CSS or JavaScript (.js, JSON etc).
 
 So how does this work?
 
